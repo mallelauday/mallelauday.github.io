@@ -1,0 +1,223 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0f14;
+    color: #e5e7eb;
+    font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position:static;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35px;
+    padding: 0 60px;
+    background: rgba(11, 15, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 2px;
+    background: #00f5ff;
+    transition:  0.3s ease-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    margin: 60px 40px;
+    padding: 60px;
+    border-radius: 24px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+    );
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ===== HOME ===== */
+#Home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#image {
+    width: 280px;
+    height: 280px;
+    padding: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top, #00f5ff, transparent 70%);
+    box-shadow: 0 0 40px rgba(0,245,255,0.35);
+}
+
+#image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#innerhome {
+    max-width: 600px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(16px);
+    padding: 40px;
+    border-radius: 24px;
+}
+
+/* ===== ABOUT / CARDS ===== */
+#innerabout,
+#frontend,
+#python,
+#ml,
+#Programming,
+#core,
+#current {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#innerabout:hover,
+#frontend:hover,
+#python:hover,
+#ml:hover,
+#Programming:hover,
+#core:hover,
+#current:hover {
+    transform: translate(-6px);
+    box-shadow: 0 25px 80px rgba(0,245,255,0.25);
+}
+
+/* ===== PROJECTS ===== */
+.project-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* ===== SKILLS ===== */
+.skills-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* ===== TEXT ===== */
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #00f5ff;
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #d1d5db;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: #9ca3af;
+}
+footer a{
+    color:#9ca3af ;
+    list-style: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #Home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    section {
+        margin: 40px 20px;
+        padding: 40px 20px;
+    }
+}
+/* ===== RESUME BUTTON ===== */
+
+.resume-btn {
+    margin-top: 25px;
+}
+
+.resume-btn a {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #00f5ff;
+    color: #0b0f14;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.resume-btn a:hover {
+    background: transparent;
+    color: #00f5ff;
+    border: 2px solid #00f5ff;
+}
