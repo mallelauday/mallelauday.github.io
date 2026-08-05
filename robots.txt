@@ -1,0 +1,5 @@
+# Robots.txt for Uday Kumar Reddy Portfolio
+User-agent: *
+Allow: /
+
+Sitemap: https://mallelauday.github.io/sitemap.xml
